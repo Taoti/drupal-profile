@@ -1,0 +1,22 @@
+name: Taoti Creative
+type: profile
+version: VERSION
+core_version_requirement: ^9
+description: Provides default site initialization for Taoti projects.
+base profile: standard
+install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - inline_form_errors
+  - media
+  - media_library
+  - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - paragraphs
+  - pathauto
+  - recreate_block_content
+  - svg_image
+  - twig_tweak
+themes:
+  - gin

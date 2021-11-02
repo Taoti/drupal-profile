@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Taoti installation profile.
+ */
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function taoti_install() {
+  module_set_weight('taoti', 9999);
+}
+
+/**
+ * Implements hook_site_install_finished().
+ *
+ * Perform post install action after the install has completed.
+ */
+function taoti_site_install_finished($install_state) {
+  // Uninstall default modules from standard that we don't actually want.
+  // Have to remove the default comment field first.
+  $field = FieldStorageConfig::loadByName('node', 'comment');
+  if ($field) {
+    $field->delete();
+  }
+  /** @var \Drupal\Core\Extension\ModuleInstallerInterface $module_installer */
+  $module_installer = Drupal::service('module_installer');
+  $install = $module_installer->uninstall([
+    'big_pipe',
+    'comment',
+    'contact',
+    'quickedit',
+    'tour',
+  ]);
+}
