@@ -8,7 +8,9 @@ install:
   - admin_toolbar
   - admin_toolbar_tools
   - inline_form_errors
+  - field_group
   - media
+  - media_entity_browser
   - media_library
   - metatag
   - metatag_open_graph
