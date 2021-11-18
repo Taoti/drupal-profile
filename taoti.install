@@ -40,4 +40,12 @@ function taoti_site_install_finished($install_state) {
     'quickedit',
     'tour',
   ]);
+
+  // Set gin as the admin theme
+  $config = \Drupal::service('config.factory')->getEditable('system.theme');
+  $config->set('admin', 'gin')->save();
+
+  $install = $module_installer->install([
+    'gin_toolbar',
+  ]);
 }
