@@ -9,6 +9,7 @@ install:
   - admin_toolbar_tools
   - inline_form_errors
   - field_group
+  - gin_login
   - media
   - media_entity_browser
   - media_library
