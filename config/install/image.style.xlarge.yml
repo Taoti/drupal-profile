@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: xlarge
+label: 'XLarge (1366x1366)'
+effects:
+  a0973bc5-1674-4423-a3cc-6adc4b427c66:
+    uuid: a0973bc5-1674-4423-a3cc-6adc4b427c66
+    id: image_scale
+    weight: 1
+    data:
+      width: 1366
+      height: 1366
+      upscale: false
