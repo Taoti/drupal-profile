@@ -7,7 +7,7 @@ effects:
   0176df8e-e8e4-469a-9386-3925ee851237:
     uuid: 0176df8e-e8e4-469a-9386-3925ee851237
     id: image_scale
-    weight: 1
+    weight: 0
     data:
       width: 420
       height: 420

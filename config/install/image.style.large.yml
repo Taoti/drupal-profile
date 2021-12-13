@@ -9,7 +9,7 @@ effects:
   ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
     uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
     id: image_scale
-    weight: 0
+    weight: 2
     data:
       width: 1024
       height: 1024
