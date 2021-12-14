@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: small
+label: 'Small (420x420)'
+effects:
+  0176df8e-e8e4-469a-9386-3925ee851237:
+    uuid: 0176df8e-e8e4-469a-9386-3925ee851237
+    id: image_scale
+    weight: 0
+    data:
+      width: 420
+      height: 420
+      upscale: false
