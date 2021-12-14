@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.medium
+    - image.style.small
+    - image.style.xlarge
+  theme:
+    - mimic
+id: standard
+label: Standard
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: xlarge
+    breakpoint_id: mimic.xlarge
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: mimic.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: medium
+    breakpoint_id: mimic.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: small
+    breakpoint_id: mimic.small
+    multiplier: 1x
+breakpoint_group: mimic
+fallback_image_style: small
