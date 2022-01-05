@@ -1,11 +1,30 @@
 langcode: en
 status: true
-dependencies: {  }
-id: content_creator
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - contextual
+    - file
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+id: content_editor
 label: 'Content Creator'
 weight: -8
 is_admin: false
 permissions:
+  - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
@@ -22,6 +41,7 @@ permissions:
   - 'create terms in tags'
   - 'create url aliases'
   - 'create video media'
+  - 'delete article revisions'
   - 'delete media'
   - 'delete own article content'
   - 'delete own audio media'
@@ -30,6 +50,7 @@ permissions:
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete own video media'
+  - 'delete page revisions'
   - 'edit own article content'
   - 'edit own audio media'
   - 'edit own document media'
@@ -38,8 +59,9 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own video media'
   - 'edit terms in tags'
+  - 'revert all revisions'
   - 'update media'
-  - 'use text format full_html'
+  - 'view all revisions'
   - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'

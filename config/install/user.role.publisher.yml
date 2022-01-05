@@ -1,6 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - node
+    - system
+    - toolbar
 id: publisher
 label: Publisher
 weight: -9
