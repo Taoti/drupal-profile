@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies: {  }
+id: publisher
+label: Publisher
+weight: -9
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create page content'
+  - 'delete any article content'
+  - 'delete any page content'
+  - 'delete orphan revisions'
+  - 'delete own article content'
+  - 'delete own page content'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own page content'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'
