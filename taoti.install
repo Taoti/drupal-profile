@@ -114,4 +114,13 @@ function taoti_set_custom_role_overrides(): void {
       'view the administration theme',
     ])
     ->save(TRUE);
+
+  $configFactory->getEditable('user.role.authenticated')
+    ->set('permissions', [
+      'access content',
+      'access shortcuts',
+      'search content',
+      'use text format basic_html',
+    ])
+    ->save(TRUE);
 }
