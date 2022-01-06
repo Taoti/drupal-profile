@@ -6,7 +6,6 @@
  */
 
 use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\user\Entity\User;
 
 /**
  * Implements hook_install().
@@ -24,7 +23,7 @@ function taoti_install() {
  *
  * Perform post install action after the install has completed.
  */
-function taoti_site_install_finished($install_state) {
+function taoti_site_install_finished() {
   // Uninstall default modules from standard that we don't actually want.
   // Have to remove the default comment field first.
   $field = FieldStorageConfig::loadByName('node', 'comment');
@@ -32,8 +31,8 @@ function taoti_site_install_finished($install_state) {
     $field->delete();
   }
   /** @var \Drupal\Core\Extension\ModuleInstallerInterface $module_installer */
-  $module_installer = Drupal::service('module_installer');
-  $install = $module_installer->uninstall([
+  $module_installer = \Drupal::service('module_installer');
+  $module_installer->uninstall([
     'big_pipe',
     'comment',
     'contact',
@@ -42,10 +41,86 @@ function taoti_site_install_finished($install_state) {
   ]);
 
   // Set gin as the admin theme
-  $config = \Drupal::service('config.factory')->getEditable('system.theme');
+  $config = \Drupal::configFactory()->getEditable('system.theme');
   $config->set('admin', 'gin')->save();
 
-  $install = $module_installer->install([
+  $module_installer->install([
     'gin_toolbar',
   ]);
+
+  taoti_set_custom_role_overrides();
+}
+
+/**
+ * Overrides some Standard install profile config items.
+ *
+ * @link https://taoti.teamwork.com/#/tasks/34149086
+ */
+function taoti_set_custom_role_overrides(): void {
+  $configFactory = \Drupal::configFactory();
+
+  $configFactory->getEditable('user.role.administrator')
+    ->set('weight', -10)
+    ->save(TRUE);
+
+  $configFactory->getEditable('user.role.anonymous')
+    ->set('weight', -7)
+    ->save(TRUE);
+
+  $configFactory->getEditable('user.role.content_editor')
+    ->set('label', 'Content Creator')
+    ->set('weight', -8)
+    ->set('permissions', [
+      'access administration pages',
+      'access content overview',
+      'access contextual links',
+      'access files overview',
+      'access toolbar',
+      'administer url aliases',
+      'create article content',
+      'create audio media',
+      'create document media',
+      'create image media',
+      'create media',
+      'create page content',
+      'create remote_video media',
+      'create terms in tags',
+      'create url aliases',
+      'create video media',
+      'delete article revisions',
+      'delete media',
+      'delete own article content',
+      'delete own audio media',
+      'delete own document media',
+      'delete own image media',
+      'delete own page content',
+      'delete own remote_video media',
+      'delete own video media',
+      'delete page revisions',
+      'edit own article content',
+      'edit own audio media',
+      'edit own document media',
+      'edit own image media',
+      'edit own page content',
+      'edit own remote_video media',
+      'edit own video media',
+      'edit terms in tags',
+      'revert all revisions',
+      'update media',
+      'view all revisions',
+      'view media',
+      'view own unpublished content',
+      'view own unpublished media',
+      'view the administration theme',
+    ])
+    ->save(TRUE);
+
+  $configFactory->getEditable('user.role.authenticated')
+    ->set('permissions', [
+      'access content',
+      'access shortcuts',
+      'search content',
+      'use text format basic_html',
+    ])
+    ->save(TRUE);
 }

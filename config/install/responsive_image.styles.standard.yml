@@ -6,8 +6,6 @@ dependencies:
     - image.style.medium
     - image.style.small
     - image.style.xlarge
-  theme:
-    - mimic
 id: standard
 label: Standard
 image_style_mappings:

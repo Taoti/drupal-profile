@@ -19,6 +19,7 @@ install:
   - paragraphs
   - pathauto
   - recreate_block_content
+  - responsive_image
   - svg_image
   - twig_tweak
 themes:
