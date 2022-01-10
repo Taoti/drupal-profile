@@ -2,12 +2,6 @@
   "name": "taoti/drupal-profile",
   "type": "drupal-profile",
   "description": "Provides default site initialization for Taoti projects.",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/taoti/repeat_twig/"
-    }
-  ],
   "require": {
     "drupal/admin_toolbar": "^3.0",
     "drupal/field_group": "^3.0",
@@ -20,7 +14,6 @@
     "drupal/svg_image": "^1.9",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^3.1",
-    "drupal/yoast_seo": "^1.7",
-    "taoti/repeat_twig": "dev-main"
+    "drupal/yoast_seo": "^1.7"
   }
 }
