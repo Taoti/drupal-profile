@@ -10,7 +10,7 @@ id: paragraph.cta.field_cta_link
 field_name: field_cta_link
 entity_type: paragraph
 bundle: cta
-label: 'CTA Single CTA'
+label: 'CTA Link'
 description: ''
 required: false
 translatable: true
