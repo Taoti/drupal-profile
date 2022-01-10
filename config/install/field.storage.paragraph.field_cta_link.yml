@@ -4,8 +4,8 @@ dependencies:
   module:
     - link
     - paragraphs
-id: paragraph.field_cta_single_cta
-field_name: field_cta_single_cta
+id: paragraph.field_cta_link
+field_name: field_cta_link
 entity_type: paragraph
 type: link
 settings: {  }
