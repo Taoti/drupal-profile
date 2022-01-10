@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_title
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_quote_title
+field_name: field_quote_title
+entity_type: paragraph
+bundle: quote
+label: 'Quote Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
