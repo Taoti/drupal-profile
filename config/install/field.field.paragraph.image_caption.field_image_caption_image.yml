@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_caption_caption
+    - media.type.image
+    - paragraphs.paragraphs_type.image_caption
+id: paragraph.image_caption.field_image_caption_caption
+field_name: field_image_caption_caption
+entity_type: paragraph
+bundle: image_caption
+label: 'Image Caption - Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
