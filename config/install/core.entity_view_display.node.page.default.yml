@@ -10,8 +10,6 @@ dependencies:
     - entity_reference_revisions
     - text
     - user
-_core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
 targetEntityType: node
 bundle: page
