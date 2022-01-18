@@ -49,29 +49,26 @@ function taoti_site_install_finished() {
   ]);
 
   taoti_set_custom_role_overrides();
-
-  // Install Vocabulary and terms for Media Directory
-  $new_vocab = (object) array(
-    'name' => 'Directories',
-    'description' => 'This vocabulary is for media directory',
-    'machine_name' => 'directories',
-  );  
-  taxonomy_vocabulary_save($new_vocab);
-
-  // Create default terms for Directories Vocabulary
-  $vocab = taxonomy_vocabulary_machine_name_load('directories');
   
+  // Install Vocabulary and terms for Media Directory
+ 
+  \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->create([
+                'name' => 'Directories',
+                'vid' => 'directories',
+                'description' => 'This vocabulary is for media directory'
+  ])->save();
+
   $arr = array('Decorative','Nature','2022');
 
   foreach ($arr as &$value) {
-    
-    $term = (object) array(
-     'name' => $value,
-     'description' => $value,
-     'vid' => $vocab->vid,
-    );
-    taxonomy_term_save($term);
-  }  
+    //add term to the vocabulary
+    \Drupal::entityTypeManager()->getStorage('taxonomy_term')->create([
+                  'name' => $value,
+                  'vid' => 'directories',
+    ])->save(); 
+  }
+
+ 
 }
 
 /**
