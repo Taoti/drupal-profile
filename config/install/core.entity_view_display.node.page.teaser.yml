@@ -10,7 +10,6 @@ dependencies:
   module:
     - text
     - user
-
 id: node.page.teaser
 targetEntityType: node
 bundle: page

@@ -10,7 +10,6 @@ dependencies:
     - paragraphs
     - path
     - text
-
 id: node.page.default
 targetEntityType: node
 bundle: page
