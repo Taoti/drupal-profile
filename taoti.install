@@ -64,12 +64,12 @@ function taoti_set_custom_role_overrides(): void {
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.anonymous')
-    ->set('weight', -7)
+    ->set('weight', -6)
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.content_editor')
     ->set('label', 'Content Creator')
-    ->set('weight', -8)
+    ->set('weight', -7)
     ->set('permissions', [
       'access administration pages',
       'access content overview',
@@ -116,6 +116,7 @@ function taoti_set_custom_role_overrides(): void {
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.authenticated')
+    ->set('weight', -5)
     ->set('permissions', [
       'access content',
       'access shortcuts',
