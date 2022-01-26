@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_subtitle
+    - field.field.paragraph.hero.field_hero_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.hero
+  module:
+    - svg_image
+id: paragraph.hero_layout.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hero_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_hero_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
