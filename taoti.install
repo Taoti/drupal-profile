@@ -49,7 +49,7 @@ function taoti_site_install_finished() {
   ]);
 
   taoti_set_custom_role_overrides();
-  taoti_override_core_content_types()
+  taoti_override_core_content_types();
 }
 
 /**
@@ -281,5 +281,6 @@ function taoti_override_core_content_types(): void {
       'third_party_settings' =>
         [
         ],
-    ]);
+    ])
+    ->save();
 }
