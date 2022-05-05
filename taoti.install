@@ -84,12 +84,12 @@ function taoti_set_custom_role_overrides(): void {
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.anonymous')
-    ->set('weight', -7)
+    ->set('weight', -6)
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.content_editor')
     ->set('label', 'Content Creator')
-    ->set('weight', -8)
+    ->set('weight', -7)
     ->set('permissions', [
       'access administration pages',
       'access content overview',
@@ -136,6 +136,7 @@ function taoti_set_custom_role_overrides(): void {
     ->save(TRUE);
 
   $configFactory->getEditable('user.role.authenticated')
+    ->set('weight', -5)
     ->set('permissions', [
       'access content',
       'access shortcuts',
@@ -143,4 +144,163 @@ function taoti_set_custom_role_overrides(): void {
       'use text format basic_html',
     ])
     ->save(TRUE);
+}
+
+/**
+ * Override standard profile content type settings.
+ *
+ * Use field groups on basic pages.
+ */
+function taoti_override_core_content_types(): void {
+  /** @var \Drupal\Core\Entity\Entity\EntityFormDisplay $entity_form */
+  $entity_form = \Drupal::entityTypeManager()
+    ->getStorage('entity_form_display')
+    ->load('node.page.default');
+  $entity_form->setThirdPartySetting('field_group', 'group_groups', [
+    'children' =>
+      [
+        0 => 'group_hero',
+        1 => 'group_content',
+        2 => 'group_attributes_relationships',
+      ],
+    'label' => 'Groups',
+    'region' => 'content',
+    'parent_name' => '',
+    'weight' => 1,
+    'format_type' => 'tabs',
+    'format_settings' =>
+      [
+        'classes' => '',
+        'show_empty_fields' => FALSE,
+        'id' => '',
+        'direction' => 'vertical',
+        'width_breakpoint' => 640,
+      ],
+  ])
+    ->setThirdPartySetting('field_group', 'group_content', [
+      'children' =>
+        [
+          0 => 'field_layout',
+        ],
+      'label' => 'Content',
+      'region' => 'content',
+      'parent_name' => 'group_groups',
+      'weight' => 10,
+      'format_type' => 'tab',
+      'format_settings' =>
+        [
+          'classes' => '',
+          'show_empty_fields' => FALSE,
+          'id' => '',
+          'formatter' => 'closed',
+          'description' => '',
+          'required_fields' => TRUE,
+        ],
+    ])
+    ->setThirdPartySetting('field_group', 'group_attributes_relationships', [
+      'children' =>
+        [
+        ],
+      'label' => 'Attributes/Relationships',
+      'region' => 'content',
+      'parent_name' => 'group_groups',
+      'weight' => 11,
+      'format_type' => 'tab',
+      'format_settings' =>
+        [
+          'classes' => '',
+          'show_empty_fields' => FALSE,
+          'id' => '',
+          'formatter' => 'closed',
+          'description' => '',
+          'required_fields' => TRUE,
+        ],
+    ])
+    ->setThirdPartySetting('field_group', 'group_hero', [
+      'children' =>
+        [
+          0 => 'field_hero',
+          1 => 'body',
+        ],
+      'label' => 'Hero / Summary',
+      'region' => 'content',
+      'parent_name' => 'group_groups',
+      'weight' => 9,
+      'format_type' => 'tab',
+      'format_settings' =>
+        [
+          'classes' => '',
+          'show_empty_fields' => FALSE,
+          'id' => '',
+          'formatter' => 'open',
+          'description' => '',
+          'required_fields' => TRUE,
+        ],
+    ])
+    ->setComponent('body', [
+      'type' => 'text_textarea_with_summary',
+      'weight' => 11,
+      'region' => 'content',
+      'settings' =>
+        [
+          'rows' => 9,
+          'summary_rows' => 3,
+          'placeholder' => '',
+          'show_summary' => FALSE,
+        ],
+      'third_party_settings' =>
+        [
+        ],
+    ])
+    ->setComponent('field_hero', [
+      'type' => 'paragraphs',
+      'weight' => 10,
+      'region' => 'content',
+      'settings' =>
+        [
+          'title' => 'Paragraph',
+          'title_plural' => 'Paragraphs',
+          'edit_mode' => 'open',
+          'closed_mode' => 'summary',
+          'autocollapse' => 'none',
+          'closed_mode_threshold' => 0,
+          'add_mode' => 'dropdown',
+          'form_display_mode' => 'default',
+          'default_paragraph_type' => '',
+          'features' =>
+            [
+              'collapse_edit_all' => 'collapse_edit_all',
+              'duplicate' => 'duplicate',
+            ],
+        ],
+      'third_party_settings' =>
+        [
+        ],
+    ])
+    ->setComponent('field_layout', [
+      'type' => 'paragraphs',
+      'weight' => 12,
+      'region' => 'content',
+      'settings' =>
+        [
+          'title' => 'Paragraph',
+          'title_plural' => 'Paragraphs',
+          'edit_mode' => 'open',
+          'closed_mode' => 'summary',
+          'autocollapse' => 'none',
+          'closed_mode_threshold' => 0,
+          'add_mode' => 'dropdown',
+          'form_display_mode' => 'default',
+          'default_paragraph_type' => '',
+          'features' =>
+            [
+              'collapse_edit_all' => 'collapse_edit_all',
+              'duplicate' => 'duplicate',
+            ],
+        ],
+      'third_party_settings' =>
+        [
+        ],
+    ])
+    ->save();
 }
