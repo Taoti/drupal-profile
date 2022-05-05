@@ -11,6 +11,9 @@ install:
   - field_group
   - gin_login
   - media
+  - media_directories
+  - media_directories_ui
+  - media_directories_editor
   - media_entity_browser
   - media_library
   - metatag

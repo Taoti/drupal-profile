@@ -49,7 +49,26 @@ function taoti_site_install_finished() {
   ]);
 
   taoti_set_custom_role_overrides();
-  taoti_override_core_content_types();
+  
+  // Install Vocabulary and terms for Media Directory
+ 
+  \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->create([
+                'name' => 'Directories',
+                'vid' => 'directories',
+                'description' => 'This vocabulary is for media directory'
+  ])->save();
+
+  $arr = array('Decorative','Nature','2022');
+
+  foreach ($arr as &$value) {
+    //add term to the vocabulary
+    \Drupal::entityTypeManager()->getStorage('taxonomy_term')->create([
+                  'name' => $value,
+                  'vid' => 'directories',
+    ])->save(); 
+  }
+
+ 
 }
 
 /**
