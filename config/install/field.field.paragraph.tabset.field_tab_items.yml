@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_items
+    - paragraphs.paragraphs_type.tab_item
+    - paragraphs.paragraphs_type.tabset
+  module:
+    - entity_reference_revisions
+id: paragraph.tabset.field_tab_items
+field_name: field_tab_items
+entity_type: paragraph
+bundle: tabset
+label: 'Tab Items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tab_item: tab_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: false
+      accordion_item:
+        weight: 13
+        enabled: false
+      carousel:
+        weight: 14
+        enabled: false
+      carousel_item:
+        weight: 15
+        enabled: false
+      cta:
+        weight: 16
+        enabled: false
+      hero:
+        weight: 17
+        enabled: false
+      image_caption:
+        weight: 18
+        enabled: false
+      quote:
+        weight: 19
+        enabled: false
+      tab_item:
+        weight: 21
+        enabled: true
+      tabset:
+        weight: 20
+        enabled: false
+      wysiwyg:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

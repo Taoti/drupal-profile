@@ -2,28 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_caption.field_image_caption_caption
-    - field.field.paragraph.image_caption.field_image_caption_image
-    - paragraphs.paragraphs_type.image_caption
-id: paragraph.image_caption.default
+    - field.field.paragraph.carousel_item.field_carousel_item_caption
+    - field.field.paragraph.carousel_item.field_carousel_item_image
+    - paragraphs.paragraphs_type.carousel_item
+id: paragraph.carousel_item.default
 targetEntityType: paragraph
-bundle: image_caption
+bundle: carousel_item
 mode: default
 content:
-  field_image_caption_caption:
-    weight: 1
+  field_carousel_item_caption:
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 1
     region: content
-  field_image_caption_image:
+  field_carousel_item_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden: {  }

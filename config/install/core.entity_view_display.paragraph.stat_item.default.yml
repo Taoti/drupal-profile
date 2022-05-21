@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_item.field_stat_item_description
+    - field.field.paragraph.stat_item.field_stat_item_number
+    - field.field.paragraph.stat_item.field_stat_item_number_prefix
+    - field.field.paragraph.stat_item.field_stat_item_number_suffix
+    - paragraphs.paragraphs_type.stat_item
+id: paragraph.stat_item.default
+targetEntityType: paragraph
+bundle: stat_item
+mode: default
+content:
+  field_stat_item_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_stat_item_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_stat_item_number_prefix:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_stat_item_number_suffix:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

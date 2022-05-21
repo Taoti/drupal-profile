@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_item_number_suffix
+    - paragraphs.paragraphs_type.stat_item
+id: paragraph.stat_item.field_stat_item_number_suffix
+field_name: field_stat_item_number_suffix
+entity_type: paragraph
+bundle: stat_item
+label: 'Stat Item Number Suffix'
+description: 'An optional suffix to appear after the stat number, for example: <code>+</code>, <code>!</code>, <code>%</code>, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

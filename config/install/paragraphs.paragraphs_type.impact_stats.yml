@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: impact_stats
+label: 'Impact Stats'
+icon_uuid: null
+icon_default: null
+description: 'Contains one or more Stat Items.'
+behavior_plugins: {  }

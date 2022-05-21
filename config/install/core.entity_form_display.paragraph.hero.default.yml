@@ -9,19 +9,11 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - svg_image
-id: paragraph.hero_layout.default
+id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_hero_subtitle:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_hero_image:
     weight: 2
     settings:
@@ -29,6 +21,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_hero_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_hero_title:
     weight: 0

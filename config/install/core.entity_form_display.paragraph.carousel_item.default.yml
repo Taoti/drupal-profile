@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_item.field_carousel_item_caption
+    - field.field.paragraph.carousel_item.field_carousel_item_image
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - media_library
+id: paragraph.carousel_item.default
+targetEntityType: paragraph
+bundle: carousel_item
+mode: default
+content:
+  field_carousel_item_caption:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_carousel_item_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

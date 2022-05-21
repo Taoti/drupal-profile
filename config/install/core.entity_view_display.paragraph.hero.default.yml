@@ -13,14 +13,6 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_hero_subtitle:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_hero_image:
     weight: 2
     label: hidden
@@ -33,6 +25,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_hero_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_hero_title:
     weight: 0

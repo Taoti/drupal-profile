@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impact_stats.field_impact_stats_items
+    - field.field.paragraph.impact_stats.field_impact_stats_title
+    - paragraphs.paragraphs_type.impact_stats
+  module:
+    - paragraphs
+id: paragraph.impact_stats.default
+targetEntityType: paragraph
+bundle: impact_stats
+mode: default
+content:
+  field_impact_stats_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: 'Stat Item'
+      title_plural: 'Stat Items'
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: impact_stats
+    third_party_settings: {  }
+  field_impact_stats_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
