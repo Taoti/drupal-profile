@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Da72hZlYZMecb0bsgf2_zHjD3M2uI4eNaZ0hGYoD_uw
 id: image_caption
 label: 'Image Caption'
 icon_uuid: null

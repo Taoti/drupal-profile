@@ -9,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - svg_image
-_core:
-  default_config_hash: zI7J7MkwrdrSnZQD6GArZwQ-J_wByK_aJ7IQqDm2rL0
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero

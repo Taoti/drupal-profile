@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - text
-_core:
-  default_config_hash: cp9Sau4hPY9UmIEjs6Mj2r2NQ0f2EX8uuSn_Y_NiXDs
 id: paragraph.wysiwyg.default
 targetEntityType: paragraph
 bundle: wysiwyg

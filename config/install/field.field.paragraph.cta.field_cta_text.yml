@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.cta
   module:
     - text
-_core:
-  default_config_hash: U-lIp5p-STXw7HrzbzXkUVjlAV7P-ow0PBE1Qx3iKTE
 id: paragraph.cta.field_cta_text
 field_name: field_cta_text
 entity_type: paragraph

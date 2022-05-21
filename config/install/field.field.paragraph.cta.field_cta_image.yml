@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_cta_image
     - media.type.image
     - paragraphs.paragraphs_type.cta
-_core:
-  default_config_hash: owjx7w7FNg_VvuQVme-qpzXESdkT791hSVI14IwUino
 id: paragraph.cta.field_cta_image
 field_name: field_cta_image
 entity_type: paragraph

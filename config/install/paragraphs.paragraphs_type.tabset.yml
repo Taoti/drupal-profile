@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: tabset
-label: Tabset
+label: 'Tabset'
 icon_uuid: null
 icon_default: null
 description: 'Contains one or more Tab Items.'

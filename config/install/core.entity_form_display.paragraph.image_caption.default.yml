@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_caption
   module:
     - media_library
-_core:
-  default_config_hash: ZR2pCPET-sSzditPCCcAmL6GAfU5PvWSXt75EV-i630
 id: paragraph.image_caption.default
 targetEntityType: paragraph
 bundle: image_caption

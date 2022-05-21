@@ -5,8 +5,6 @@ dependencies:
     - field.field.paragraph.image_caption.field_image_caption_caption
     - field.field.paragraph.image_caption.field_image_caption_image
     - paragraphs.paragraphs_type.image_caption
-_core:
-  default_config_hash: LC9hPEf4FQpkHQS-x5mtP_nCE0TQILV_naATAC3bHJ8
 id: paragraph.image_caption.default
 targetEntityType: paragraph
 bundle: image_caption

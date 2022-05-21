@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_quote_image
     - media.type.image
     - paragraphs.paragraphs_type.quote
-_core:
-  default_config_hash: GTsYWMIMSI2wFdD5_H1ThXZtmD1ShouW1cVJt3n46sQ
 id: paragraph.quote.field_quote_image
 field_name: field_quote_image
 entity_type: paragraph

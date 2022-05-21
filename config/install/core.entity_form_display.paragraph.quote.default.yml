@@ -13,8 +13,6 @@ dependencies:
     - entity_browser_entity_form
     - inline_entity_form
     - text
-_core:
-  default_config_hash: _V4zV4U4ROgErazu-9mS22fP-QLRGs_gQjznMXE_2UE
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
