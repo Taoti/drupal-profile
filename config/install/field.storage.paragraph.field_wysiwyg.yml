@@ -4,6 +4,8 @@ dependencies:
   module:
     - paragraphs
     - text
+_core:
+  default_config_hash: uL1GOa-2vX-DyOGKdBdBnymXOODW2V7J_aFMlBft840
 id: paragraph.field_wysiwyg
 field_name: field_wysiwyg
 entity_type: paragraph

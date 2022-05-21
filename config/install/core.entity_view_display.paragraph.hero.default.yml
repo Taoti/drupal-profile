@@ -8,19 +8,13 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - svg_image
+_core:
+  default_config_hash: 2ivZyH6UuBrh1M2S5X0B99qNwL8sY8jyehXcp80Yk3s
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_hero_subtitle:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_hero_image:
     weight: 2
     label: hidden
@@ -33,6 +27,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_hero_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_hero_title:
     weight: 0

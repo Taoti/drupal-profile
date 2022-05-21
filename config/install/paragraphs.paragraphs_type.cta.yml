@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: _q5_S9-0VfzeJ4mAxyOf_VQHfm-i3X3ZzKSHX0vk6Kc
 id: cta
 label: 'Call To Action'
 icon_uuid: null

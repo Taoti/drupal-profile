@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.quote
   module:
     - text
+_core:
+  default_config_hash: w6oVJxLGJ-fw0OEAwUc9iBvXbe-QhMqLZolygbepzb8
 id: paragraph.quote.field_quote_description
 field_name: field_quote_description
 entity_type: paragraph

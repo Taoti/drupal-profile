@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_quote_member_since
     - paragraphs.paragraphs_type.quote
+_core:
+  default_config_hash: 3mf1kJjpJcOkEm8_EnxOjBdPi8DIOuQeCvj7g0A2eaA
 id: paragraph.quote.field_quote_member_since
 field_name: field_quote_member_since
 entity_type: paragraph

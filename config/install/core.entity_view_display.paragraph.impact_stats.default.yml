@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impact_stats.field_impact_stats_items
+    - field.field.paragraph.impact_stats.field_impact_stats_title
+    - paragraphs.paragraphs_type.impact_stats
+  module:
+    - entity_reference_revisions
+id: paragraph.impact_stats.default
+targetEntityType: paragraph
+bundle: impact_stats
+mode: default
+content:
+  field_impact_stats_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_impact_stats_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

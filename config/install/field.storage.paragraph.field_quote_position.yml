@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: 2saekBnCBGmEGmlwYA7YjwQvMMKT1ahZsFijzPG5qvs
 id: paragraph.field_quote_position
 field_name: field_quote_position
 entity_type: paragraph

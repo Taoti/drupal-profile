@@ -4,6 +4,8 @@ dependencies:
   module:
     - media
     - paragraphs
+_core:
+  default_config_hash: helSGcE6C-R7Djz0P0TlZkptyugGNpiGpAFSqP0iV98
 id: paragraph.field_cta_image
 field_name: field_cta_image
 entity_type: paragraph

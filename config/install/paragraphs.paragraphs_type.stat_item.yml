@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: stat_item
+label: 'Stat Item'
+icon_uuid: null
+icon_default: null
+description: 'A stat item that belongs inside of an Impact Stats paragraph.'
+behavior_plugins: {  }

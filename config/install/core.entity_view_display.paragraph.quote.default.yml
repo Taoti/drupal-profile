@@ -11,6 +11,8 @@ dependencies:
     - paragraphs.paragraphs_type.quote
   module:
     - text
+_core:
+  default_config_hash: yQRIPU9KUbfCmeoIzc3fvZQcLyVlJcd9oRJBQAgXO04
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote

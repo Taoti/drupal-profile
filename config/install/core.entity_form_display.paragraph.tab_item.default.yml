@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_item.field_tab_item_content
+    - field.field.paragraph.tab_item.field_tab_item_title
+    - paragraphs.paragraphs_type.tab_item
+  module:
+    - text
+id: paragraph.tab_item.default
+targetEntityType: paragraph
+bundle: tab_item
+mode: default
+content:
+  field_tab_item_content:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tab_item_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

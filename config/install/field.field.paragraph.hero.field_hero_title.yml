@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_hero_title
     - paragraphs.paragraphs_type.hero
+_core:
+  default_config_hash: wpEXIutvTIT5Iui4o0qKvQ9crtJJeIYao0w05jco14Q
 id: paragraph.hero.field_hero_title
 field_name: field_hero_title
 entity_type: paragraph
