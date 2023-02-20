@@ -1,29 +1,29 @@
 name: Taoti Creative
 type: profile
 version: VERSION
-core_version_requirement: ^9
+core_version_requirement: ^10
 description: Provides default site initialization for Taoti projects.
 base profile: standard
 install:
-  - admin_toolbar
-  - admin_toolbar_tools
-  - inline_form_errors
-  - field_group
-  - gin_login
-  - media
-  - media_directories
-  - media_directories_ui
-  - media_directories_editor
-  - media_entity_browser
-  - media_library
-  - metatag
-  - metatag_open_graph
-  - metatag_twitter_cards
-  - paragraphs
-  - pathauto
-  - recreate_block_content
-  - responsive_image
-  - svg_image
-  - twig_tweak
+  - admin_toolbar:admin_toolbar
+  - admin_toolbar:admin_toolbar_tools
+  - drupal:inline_form_errors
+  - drupal:media
+  - drupal:media_library
+  - drupal:responsive_image
+  - field_group:field_group
+  - gin_login:gin_login
+  - inline_entity_form:inline_entity_form
+  - media_directories:media_directories
+  - media_directories:media_directories_ui
+  - media_directories:media_directories_editor
+  - metatag:metatag
+  - metatag:metatag_open_graph
+  - metatag:metatag_twitter_cards
+  - paragraphs:paragraphs
+  - pathauto:pathauto
+  - recreate_block_content:recreate_block_content
+  - svg_image:svg_image
+  - twig_tweak:twig_tweak
 themes:
   - gin
