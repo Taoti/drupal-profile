@@ -24,6 +24,7 @@ install:
   - pathauto:pathauto
   - recreate_block_content:recreate_block_content
   - svg_image:svg_image
+  - twig_field_value:twig_field_value
   - twig_tweak:twig_tweak
 themes:
   - gin

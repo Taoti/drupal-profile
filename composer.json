@@ -20,7 +20,7 @@
     "drupal/recreate_block_content": "^2.0",
     "drupal/svg_image": "^3.0",
     "drupal/twig_field_value": "^2.0",
-    "drupal/twig_tweak": "^3.1",
+    "drupal/twig_tweak": "^3.2",
     "drupal/yoast_seo": "^1.7"
   },
   "extra": {
