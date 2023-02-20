@@ -27,4 +27,4 @@ install:
   - twig_field_value:twig_field_value
   - twig_tweak:twig_tweak
 themes:
-  - gin
+  - gin:gin
