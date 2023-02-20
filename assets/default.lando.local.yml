@@ -1,0 +1,32 @@
+# As well as the .lando.yml and .lando.base.yml configuration files, you can
+# also use .lando.local.yml for local personal changes. This file provides some
+# examples that may be helpful depending on your system and usage.
+# Copy one or merge multiple with custom changes into .lando.local.yml.
+# Do note that if you are asking for debug help, including your .lando.local.yml
+# is important.
+
+# Example 1
+# Remember some credentials on osx.
+services:
+  appserver:
+    build_as_root:
+      - curl http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain -o git-credential-osxkeychain
+      - mv git-credential-osxkeychain /usr/local/bin/
+      - chmod u+x /usr/local/bin/git-credential-osxkeychain
+      - git config --global credential.helper osxkeychain
+
+# Example 2
+# Use a custom php ini for some values. In this case, specifically for using
+# lando on WSL with xdebug and your ide (ex PHPStorm) on Windows. You would
+# need to update the IP address in php.ini as per /etc/resolv.conf on WSL.
+# Use with a command like the below to set it correctly each time lando starts.
+# z=`grep -E "[0-9.]{7,16}" /etc/resolv.conf -o` && sed -i "s/\b[0-9.]\{6,17\}\b/$z/" php.ini && lando start
+services:
+  appserver:
+    config:
+      php: php.ini
+      # php.ini contents:
+      # xdebug.client_host=172.17.224.1
+    overrides:
+      environment:
+        XDEBUG_CONFIG: discover_client_host=0 log=/tmp/xdebug.log remote_enable=true

@@ -1,0 +1,29 @@
+#
+# A Drush configuration file
+#
+# Docs at https://github.com/drush-ops/drush/blob/master/examples/example.drush.yml
+
+command:
+  sql:
+    dump:
+      options:
+        # Omit cache and similar tables (including during a sql:sync).
+        structure-tables-key: common
+        # Uncomment this to skip tables automatically as well as the structure only tables
+        #skip-tables-key: common
+
+sql:
+  # List of tables whose *data* is skipped by the 'sql-dump' and 'sql-sync'
+  # commands when the "--structure-tables-key=common" option is provided.
+  # You may add specific tables to the existing array or add a new element.
+  structure-tables:
+    common:
+      - cache
+      - 'cache_*'
+      - history
+      - 'search_*'
+      - 'sessions'
+      - 'watchdog'
+  skip-tables:
+    common:
+      - 'migration_*'

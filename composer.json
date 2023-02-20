@@ -16,5 +16,26 @@
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^3.1",
     "drupal/yoast_seo": "^1.7"
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "taoti/drupal-pantheon",
+        "taoti/drupal-amazee"
+      ],
+      "file-mapping": {
+        "[project-root]/.github/workflows/phpcs.yml": "assets/.github/workflows/phpcs.yml",
+        "[project-root]/drush/drush.yml": "assets/drush.yml",
+        "[project-root]/default.lando.local.yml": "assets/default.lando.local.yml",
+        "[project-root]/phpcs.xml.dist": "assets/phpcs.xml.dist",
+        "[project-root]/phpcs.xml": {
+          "mode": "replace",
+          "path": "assets/phpcs.xml",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.taoti.php": "assets/settings.taoti.php",
+        "[web-root]/sites/default/default.settings.local.php": "assets/default.settings.local.php"
+      }
+    }
   }
 }

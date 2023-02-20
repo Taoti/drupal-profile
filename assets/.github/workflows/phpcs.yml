@@ -1,0 +1,50 @@
+name: Drupal coding standards
+
+on:
+  pull_request:
+    paths-ignore:
+      - "**/libraries/**"
+      - "**/node_modules/**"
+      - "**/source/**"
+      - "**/vendor/**"
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 0 indicates all history for all branches and tags.
+
+      # Need to install Composer to be able to add the coding standards rules.
+      - name: Installing Composer
+        run: |
+          EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
+          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+          ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+
+          if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
+          then
+              >&2 echo 'ERROR: Invalid installer checksum'
+              rm composer-setup.php
+              exit 1
+          fi
+          php composer-setup.php --quiet
+          RESULT=$?
+          rm composer-setup.php
+          exit $RESULT
+
+      - name: Downloading and installing PHP_CodeSniffer and the Drupal coding standards rules
+        run: |
+          php composer.phar global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          php composer.phar global require --optimize-autoloader --sort-packages squizlabs/php_codesniffer=* drupal/coder "slevomat/coding-standard:^6.0" "dealerdirect/phpcodesniffer-composer-installer:^0.7"
+          export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+      - name: Checking coding standards
+        uses: thenabeel/action-phpcs@v8
+        with:
+          files: "**.inc,**.install,**.md,**.module,**.php,**.profile,**.test,**.txt,**.theme,**.yml"
+          phpcs_path: $HOME/.composer/vendor/bin/phpcs
+          standard: phpcs.xml
+          scope: files

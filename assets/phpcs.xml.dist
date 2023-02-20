@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="taoti_drupal">
+  <description>Default Drupal code standards for Taoti Projects.</description>
+  <arg name="extensions" value="inc,install,md,module,php,profile,test,txt,theme,yml"/>
+  <arg name="colors"/>
+  <arg name="report-width" value="auto"/>
+
+  <!--Exclude third party code.-->
+  <exclude-pattern>*/libraries/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/source/*</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/README.md</exclude-pattern>
+  <exclude-pattern>*/default.settings.*</exclude-pattern>
+  <exclude-pattern>*/default.services.*</exclude-pattern>
+  <exclude-pattern>*/settings.*.php</exclude-pattern>
+  <exclude-pattern>*/web/update.php</exclude-pattern>
+  <exclude-pattern>*/web/index.php</exclude-pattern>
+  <exclude-pattern>*/web/autoload.php</exclude-pattern>
+  <exclude-pattern>*/themes/*/CHANGELOG.md</exclude-pattern>
+
+  <rule ref="Drupal"/>
+
+  <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
+  <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
+  <rule ref="SlevomatCodingStandard.Classes.ClassStructure"/>
+  <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+  <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
+  <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
+  <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
+  <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
+  <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses"/>
+  <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
+  <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+  <rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
+  <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
+    <properties>
+      <property name="ignoreComplexTernaryConditions" value="true"/>
+    </properties>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+    <properties>
+      <property name="newlinesCountBetweenOpenTagAndDeclare" value="2"/>
+      <property name="spacesCountAroundEqualsSign" value="1"/>
+    </properties>
+  </rule>
+  <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+    <exclude-pattern>*\.install</exclude-pattern>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification">
+    <exclude-pattern>*\.module</exclude-pattern>
+    <exclude-pattern>*\.theme</exclude-pattern>
+    <exclude-pattern>*\.install</exclude-pattern>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation">
+    <severity>0</severity>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification">
+    <severity>0</severity>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
+    <exclude-pattern>*\.module</exclude-pattern>
+    <exclude-pattern>*\.theme</exclude-pattern>
+    <exclude-pattern>*\.install</exclude-pattern>
+  </rule>
+  <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
+  <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+  <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+  <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
+</ruleset>
