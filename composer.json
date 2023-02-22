@@ -15,7 +15,7 @@
     "drupal/gin_login": "^2.0",
     "drupal/gin_toolbar": "^1.0@rc",
     "drupal/inline_entity_form": "^1.0@rc",
-    "drupal/media_directories": "^2.0",
+    "drupal/media_directories": "2.1.x-dev@dev",
     "drupal/metatag": "^1.7",
     "drupal/paragraphs": "^1.5",
     "drupal/pathauto": "^1.3",
