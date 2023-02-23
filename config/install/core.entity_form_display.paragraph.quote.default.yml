@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.quote.field_quote_title
     - paragraphs.paragraphs_type.quote
   module:
-    - entity_browser_entity_form
+    - media_library
     - inline_entity_form
     - text
 id: paragraph.quote.default
@@ -35,24 +35,12 @@ content:
     type: text_textarea
     region: content
   field_quote_image:
+    type: media_library_widget
     weight: 1
-    settings:
-      form_mode: default
-      override_labels: true
-      label_singular: Image
-      label_plural: Images
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      revision: false
-      collapsible: false
-      collapsed: false
-      allow_duplicate: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: media_entity_browser_modal
-    type: inline_entity_form_complex
     region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_quote_member_since:
     weight: 5
     settings:
