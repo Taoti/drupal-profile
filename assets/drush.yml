@@ -11,6 +11,11 @@ command:
         structure-tables-key: common
         # Uncomment this to skip tables automatically as well as the structure only tables
         #skip-tables-key: common
+  core:
+    rsync:
+      options:
+        # Exclude common paths of generated/temporary files.
+        exclude-paths: 'css:imagecache:ctools:js:tmp:php:styles'
 
 sql:
   # List of tables whose *data* is skipped by the 'sql-dump' and 'sql-sync'
