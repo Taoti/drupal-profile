@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 0 indicates all history for all branches and tags.
 
@@ -38,7 +38,7 @@ jobs:
       - name: Downloading and installing PHP_CodeSniffer and the Drupal coding standards rules
         run: |
           php composer.phar global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-          php composer.phar global require --optimize-autoloader --sort-packages squizlabs/php_codesniffer=* drupal/coder "slevomat/coding-standard:^6.0" "dealerdirect/phpcodesniffer-composer-installer:^0.7"
+          php composer.phar global require --optimize-autoloader --sort-packages squizlabs/php_codesniffer=* drupal/coder "slevomat/coding-standard:>=6.0" "dealerdirect/phpcodesniffer-composer-installer:>=0.7"
           export PATH="$HOME/.composer/vendor/bin:$PATH"
 
       - name: Checking coding standards
