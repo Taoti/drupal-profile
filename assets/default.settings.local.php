@@ -155,7 +155,7 @@ $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
  * to use this feature with modules that affect Drupal in a major way such as
  * the language or field module.
  */
-$settings['config_exclude_modules'] = ['devel', 'devel_php', 'devel_entity_updates', 'update', 'upgrade_status', 'stage_file_proxy'];
+$settings['config_exclude_modules'] = ['devel', 'devel_php', 'devel_entity_updates', 'upgrade_status', 'stage_file_proxy'];
 
 /**
  * Trusted host configuration.
@@ -168,3 +168,8 @@ $settings['config_exclude_modules'] = ['devel', 'devel_php', 'devel_entity_updat
 $config['config_split.config_split.local']['status'] = TRUE;
 $config['config_split.config_split.dev']['status'] = TRUE;
 $config['config_split.config_split.prod']['status'] = FALSE;
+
+/**
+ * If present, disable the AdvAgg caching.
+ */
+$config['advagg.settings']['enabled'] = FALSE;
