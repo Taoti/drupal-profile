@@ -10,7 +10,6 @@
   ],
   "require": {
     "drupal/admin_toolbar": "^3.0",
-    "drupal/classy": "^1.0",
     "drupal/field_group": "^3.0",
     "drupal/gin": "^3.0@rc",
     "drupal/gin_login": "^2.0",
