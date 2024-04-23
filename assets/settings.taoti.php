@@ -74,7 +74,7 @@ $banned_urls = [
   'backup.zip',
   'backup.tar',
   'beez',
-  'bkp',
+  '.bkp',
   'build.xml',
   'CMSHelp',
   'CMSPages',
