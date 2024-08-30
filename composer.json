@@ -14,7 +14,7 @@
     "drupal/gin": "^3.0@rc",
     "drupal/gin_login": "^2.0",
     "drupal/gin_toolbar": "^1.0@rc",
-    "drupal/inline_entity_form": "^3.0@RC",
+    "drupal/inline_entity_form": "^1.0 || ^3.0@RC",
     "drupal/media_directories": "2.1.x-dev@dev",
     "drupal/metatag": "^2.0",
     "drupal/paragraphs": "^1.5",
