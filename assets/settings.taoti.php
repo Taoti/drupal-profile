@@ -88,7 +88,6 @@ $banned_urls = [
   'item.php',
   'mailer.php',
   'magento',
-  'old/',
   'preview.php',
   '_profiler',
   'sitecore',
