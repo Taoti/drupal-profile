@@ -28,11 +28,6 @@
   },
   "extra": {
     "drupal-scaffold": {
-      "allowed-packages": [
-        "taoti/drupal-pantheon",
-        "taoti/drupal-amazee",
-        "taoti/drupal-aws"
-      ],
       "file-mapping": {
         "[project-root]/.github/workflows/phpcs.yml": "assets/.github/workflows/phpcs.yml",
         "[project-root]/drush/drush.yml": "assets/drush.yml",
