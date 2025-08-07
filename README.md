@@ -1,5 +1,13 @@
 # TAOTI Drupal Install Profile
 
+## OUTDATED
+Install profiles are mostly replaced with recipes in Drupal 10.3+
+
+Use taoti/drupal-ops + taoti/recipe-* as required.
+
+Be careful when switching to adequately update dependencies. 
+
+## Notes
 Provides default functionality across Taoti sites as well as managed/simplified
 updating of some of Taoti's Drupal standard ops aspects for sites as well as
 taking care of some dependencies.
