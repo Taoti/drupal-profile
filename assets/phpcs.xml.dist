@@ -51,6 +51,7 @@
     <exclude-pattern>*\.module</exclude-pattern>
     <exclude-pattern>*\.theme</exclude-pattern>
     <exclude-pattern>*\.install</exclude-pattern>
+    <exclude-pattern>*/Hook/*</exclude-pattern>
   </rule>
   <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
   <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation">
@@ -63,6 +64,7 @@
     <exclude-pattern>*\.module</exclude-pattern>
     <exclude-pattern>*\.theme</exclude-pattern>
     <exclude-pattern>*\.install</exclude-pattern>
+    <exclude-pattern>*/Hook/*</exclude-pattern>
   </rule>
   <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
   <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
