@@ -11,9 +11,9 @@
   "require": {
     "drupal/admin_toolbar": "^3.0",
     "drupal/field_group": "^3.0",
-    "drupal/gin": "^3.0@rc",
+    "drupal/gin": "^4.1",
     "drupal/gin_login": "^2.0",
-    "drupal/gin_toolbar": "^1.0@rc",
+    "drupal/gin_toolbar": "^2.1",
     "drupal/inline_entity_form": "^1.0 || ^3.0@RC",
     "drupal/media_directories": "2.1.x-dev@dev",
     "drupal/metatag": "^2.0",
