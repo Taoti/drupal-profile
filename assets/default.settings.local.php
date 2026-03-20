@@ -32,8 +32,7 @@
  *
  * @see https://wiki.php.net/rfc/expectations
  */
-assert.active=1;
-assert.exception=1;
+ini_set('zend.assertions', 1);
 
 /**
  * Enable local development services.
